@@ -346,6 +346,8 @@ typedef void (*afdt_response_handler_t)(
  * For example, a callback could close \a sent_fd if the recipient is
  * going to take over all operations.
  *
+ * The post handler is called before the server returns to the event loop.
+ *
  * @param request          Request buffer sent by the client.
  * @param request_length   Length of \a request.
  * @param response         Response buffer sent by the server.
