@@ -38,7 +38,7 @@
 #define RESPONSE_CONTENT "987zyx"
 
 
-// Context object use for most libevent and afdt callbacks.
+// Context object used for most libevent and afdt callbacks.
 struct transfer_context {
   // References to the top-level servers.
   struct event_base* const eb;

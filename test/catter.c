@@ -23,9 +23,9 @@
 #include <afdt.h>
 
 
-// Context object use for most libevent and afdt callbacks.
+// Context object used for most libevent and afdt callbacks.
 struct transfer_context {
-  // References to the top-level servers.
+  // References to the top-level server.
   struct event_base* const eb;
   // bufferevents used by the client.
   struct bufferevent* wbufev;
