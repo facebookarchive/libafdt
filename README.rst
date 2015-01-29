@@ -16,4 +16,4 @@ Please see afdt.h or the Doxygen documentation for more details.
 Links
 =====
 
-* `Doxygen docs </doxygen>`_
+* `Doxygen docs <http://facebook.github.io/libafdt/doxygen/>`_
