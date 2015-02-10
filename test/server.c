@@ -25,7 +25,9 @@
      /close_prod:  Close the production socket.
  */
 
-#define _BSD_SOURCE
+// _BSD_SOURCE is deprecated in glibc 2.20
+#define _BSD_SOURCE 1
+#define _DEFAULT_SOURCE 1
 #define _XOPEN_SOURCE
 #include <stdlib.h>
 #include <stdio.h>

@@ -20,7 +20,9 @@
    an EOF on stdin and finishes writing everything to the remote stdout.
  */
 
-#define _BSD_SOURCE
+// _BSD_SOURCE is deprecated in glibc 2.20
+#define _BSD_SOURCE 1
+#define _DEFAULT_SOURCE 1
 #define _XOPEN_SOURCE
 #include <stdbool.h>
 #include <stdlib.h>

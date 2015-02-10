@@ -9,8 +9,9 @@
  */
 
 // libevent needs this for u_char
-#define _BSD_SOURCE
-
+// _BSD_SOURCE is deprecated in glibc 2.20
+#define _BSD_SOURCE 1
+#define _DEFAULT_SOURCE 1
 #include <stdlib.h>
 #include <errno.h>
 #include <assert.h>
