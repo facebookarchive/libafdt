@@ -51,7 +51,7 @@ if test "x$ax_have_libevent" = "xyes" ; then : ; else
   AX_LIB_EVENT
 fi
 
-if test "x$ax_hav9_libevent_2_0_9" = "xyes" ; then
+if test "x$ax_have_libevent_2_0_9" = "xyes" ; then
   have_libevent_209="yes"
 fi
 if test "x$ax_have_libevent_2_0_9$ax_have_libevent_1_4_5" = "xyes" ; then
