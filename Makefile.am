@@ -17,6 +17,7 @@ libafdt_la_SOURCES = \
 # Only enable the asynchronous interface if libevent is available.
 if HAVE_LIBEVENT
 libafdt_la_SOURCES += src/async.c
+libafdt_la_LIBADD = $(LIBEVENT_LIBS)
 endif
 
 include_HEADERS = \
@@ -28,7 +29,7 @@ if HAVE_LIBEVENT_143
 
 noinst_PROGRAMS = catter sync_catter
 PROGRAMS_CPPFLAGS = $(LIBEVENT_CPPFLAGS) -I $(top_srcdir)/src
-PROGRAMS_LDADD = libafdt.la $(LIBEVENT_LIBS)
+PROGRAMS_LDADD = libafdt.la
 
 catter_SOURCES = test/catter.c
 catter_CPPFLAGS = $(PROGRAMS_CPPFLAGS)
