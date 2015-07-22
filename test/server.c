@@ -226,7 +226,6 @@ void bind_prod_handler(struct evhttp_request* request, void* arg) {
 
 void close_prod_handler(struct evhttp_request* request, void* arg) {
   struct transfer_context* ctx = (struct transfer_context*)arg;
-  int ret;
 
   if (ctx->prod_handle == NULL) {
     send_const_reply(request, 200, "no_prod");
@@ -235,13 +234,10 @@ void close_prod_handler(struct evhttp_request* request, void* arg) {
 
   evhttp_del_accept_socket(ctx->eh, ctx->prod_handle);
   ctx->prod_handle = NULL;
-
-  ret = close(ctx->prod_fd);
+  // Note that some old versions of libevent will not automatically close
+  // this fd.  The behavior was changed somewhere between libevent commit
+  // c8b0fe4ad76bab55 and f665924649b3d630.
   ctx->prod_fd = -1;
-  if (ret < 0) {
-    send_const_reply(request, 500, "close_fail");
-    return;
-  }
 
   send_const_reply(request, 200, "closed");
 }
