@@ -9,6 +9,7 @@ Makefile.in
 aclocal.m4
 autom4te.cache
 autoscan.log
+compile
 config.guess
 config.h.in
 config.h.in~
@@ -23,6 +24,7 @@ m4/lt~obsolete.m4
 m4/ltoptions.m4
 m4/ltsugar.m4
 m4/ltversion.m4
+test-driver
 EOL
 # Separate this one to avoid a silly autoscan warning
 rm -f "i"nstall-sh

@@ -10,14 +10,10 @@ if test -f m4/ax_lib_event.m4 ; then : ; else
   fi
   echo >&2 "Please copy ax_lib_event.m4 from Thrift (under aclocal)"
   echo >&2 "to the 'm4' directory.  Or run"
-  echo >&2 "  wget -O m4/ax_lib_event.m4 'http://gitweb.thrift-rpc.org/?p=thrift.git;a=blob_plain;f=aclocal/ax_lib_event.m4;hb=HEAD'"
+  echo >&2 "  wget -O m4/ax_lib_event.m4 'https://raw.githubusercontent.com/apache/thrift/master/aclocal/ax_lib_event.m4'"
   echo >&2 "Then re-run bootstrap.sh"
   exit 1
 fi
 
 autoscan
-libtoolize --automake
-autoheader
-aclocal -I m4
-autoconf
-automake --add-missing
+autoreconf --install

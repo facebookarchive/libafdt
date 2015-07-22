@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([libafdt], [0.1.0], [dreiss@facebook.com])
+AC_INIT([libafdt], [0.1.0], [dreiss@fb.com])
 AC_CONFIG_SRCDIR([src/afdt.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
